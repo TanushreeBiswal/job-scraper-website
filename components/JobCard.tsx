@@ -37,6 +37,17 @@ const JobCard: React.FC<JobCardProps> = ({ job }) => {
         <p className="text-gray-600 text-sm line-clamp-3 mb-4">
           {previewText}...
         </p>
+
+        <div className="mt-auto pt-4 border-t border-gray-100">
+          <a
+            href={job.website_content.actual_link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block w-full text-center py-2 px-4 bg-blue-50 text-blue-600 rounded-lg font-medium hover:bg-blue-100 transition-colors text-sm"
+          >
+            {job.website_content.action || 'Apply Now'}
+          </a>
+        </div>
       </div>
 
       <div className="bg-gray-50 p-4 border-t border-gray-100">

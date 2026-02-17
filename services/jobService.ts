@@ -12,12 +12,12 @@ export const fetchJobs = async (): Promise<Job[]> => {
     // Map raw JSON to Job interface if needed, or purely pass through if structure matches
     const jobs: Job[] = data.map((item: any) => ({
       ...item,
-      // Ensure nested objects exist
-      website_content: item.website_content || {
-        title: 'Untitled Job',
-        markdown_content: '',
-        actual_link: '',
-        action: 'Apply'
+      // Ensure nested objects exist and populate defaults if fields are missing (e.g. if item.website_content is {})
+      website_content: {
+        title: item.website_content?.title || 'Untitled Job',
+        markdown_content: item.website_content?.markdown_content || '',
+        actual_link: item.website_content?.actual_link || '',
+        action: item.website_content?.action || 'Apply'
       },
       // Fallback/Computed fields
       date: new Date().toISOString().split('T')[0], // We might want to add a 'created_at' to backend JSON later

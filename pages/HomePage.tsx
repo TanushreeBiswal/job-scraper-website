@@ -26,7 +26,7 @@ const HomePage: React.FC = () => {
   }, []);
 
   const filteredJobs = jobs.filter(job =>
-    job.website_content.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    (job.website_content?.title || "").toLowerCase().includes(searchTerm.toLowerCase()) ||
     job.location?.toLowerCase().includes(searchTerm.toLowerCase()) ||
     job.type?.toLowerCase().includes(searchTerm.toLowerCase())
   );
