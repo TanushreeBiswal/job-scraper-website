@@ -37,10 +37,10 @@ const HomePage: React.FC = () => {
       <div className="bg-slate-900 text-white py-12 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight mb-6">
-            Find Your Next <span className="text-blue-400">Dream Job</span>
+            <span className="text-blue-400">Career135</span>
           </h1>
           <p className="text-lg text-slate-300 mb-8 max-w-2xl mx-auto">
-            Daily updates on the latest opportunities. We curate the best openings just for you.
+            Latest Govt Jobs, Exam Dates, Results & Career Updates in India
           </p>
 
           <div className="relative max-w-xl mx-auto">
