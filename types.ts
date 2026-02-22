@@ -15,6 +15,7 @@ export interface Job {
     ig?: string;
     wp?: string;
     th?: string;
+    tg?: string;
   };
   status: string;
   href: string;
